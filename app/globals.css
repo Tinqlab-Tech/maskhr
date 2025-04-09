@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
