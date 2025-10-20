@@ -1,6 +1,6 @@
-import TitleText from "../typography/TitleText";
 import NormalText from "../typography/NormalText";
-import LightText from "../typography/LightText";
+import { HeaderOne } from "../typography/HeaderOne";
+import MainText from "../typography/MainText";
 
 export default function TextLeftPageStarter({
   Title,
@@ -15,14 +15,14 @@ export default function TextLeftPageStarter({
           : "bg-none darks:bg-[#212124]  "
       }  flex flex-col justify-center items-start gap-1 md:gap-2 my-[20px] `}
     >
-      <TitleText
+      <HeaderOne
         text={Title}
         color={"text-primary darks:text-white"}
         size={
           "text-[24px] leading-[24px]  md:text-[18px] md:leading-[18px] lg:text-[24px] lg:leading-[24px]"
         }
       />
-      <LightText text={SubtitleText} color={"darks:text-grayText "} />
+      <MainText text={SubtitleText} color={"darks:text-mainBlack/50 "} />
     </div>
   );
 }

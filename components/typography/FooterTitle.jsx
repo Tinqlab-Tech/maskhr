@@ -1,9 +1,9 @@
-export default function FooterTitle({ text, color }) {
+export default function FooterTitle({ text, color, textLeft }) {
   return (
     <h2
       className={`${
         color ? color : "text-mainBlack"
-      } mb-[8px]  pt-[8px] text-[20px] font-bold leading-[20px] md:pt-0 font-Gilroy`}
+      }        ${textLeft === true ? "text-center md:text-left" : "text-center"}  font-semibold text-[20px] leading-[20px]  font-lato`}
     >
       {text}
     </h2>

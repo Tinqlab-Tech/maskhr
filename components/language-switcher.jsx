@@ -7,6 +7,7 @@ import pt from "/public/flags/PT.svg";
 import en from "/public/flags/US.svg";
 import fr from "/public/flags/FR.svg";
 import ar from "/public/flags/AR.png";
+import globe from "@/public/images/icons/globe.png";
 
 // The following cookie name is important because it's Google-predefined for the translation engine purpose
 const COOKIE_NAME = "googtrans";
@@ -138,15 +139,9 @@ const LanguageSwitcher = () => {
       <Dropdown
         key={`${image}`}
         inline
-        className="mx-2"
+        className="mx-2 "
         label={
-          <Image
-            src={image}
-            alt={"country logo"}
-            width={20}
-            height={20}
-            className="inline "
-          />
+          <Image src={globe} alt={"MaskHr languages"} width={30} height={30} />
         }
       >
         {languageConfig.languages.map((ld, i) => (
@@ -162,14 +157,14 @@ const LanguageSwitcher = () => {
                     ld.name === "en"
                       ? en
                       : ld.name === "pt"
-                      ? pt
-                      : ld.name === "fr"
-                      ? fr
-                      : ld.name === "es"
-                      ? es
-                      : ld.name === "ar"
-                      ? ar
-                      : en
+                        ? pt
+                        : ld.name === "fr"
+                          ? fr
+                          : ld.name === "es"
+                            ? es
+                            : ld.name === "ar"
+                              ? ar
+                              : en
                   }
                   alt={ld.name}
                   width={20}

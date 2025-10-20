@@ -7,27 +7,30 @@ import Link from "next/link";
 // Image imports
 import logo from "@/public/images/logo.png";
 import NormalText from "@/components/typography/NormalText";
-import { GiBookCover } from "react-icons/gi";
 import { CiMenuFries } from "react-icons/ci";
-import { FaMusic, FaPodcast, FaVideo } from "react-icons/fa6";
-
-import { FaHome } from "react-icons/fa";
-import { OutlineButton } from "../button/OutlineButton";
-import { MainButton } from "../button/MainButton";
 import { MdCancel } from "react-icons/md";
+import { usePathname } from "next/navigation";
 
 export default function MobileNav() {
   const [drawerState, setDrawerState] = useState(false);
   // const t = useTranslations("Menu");
-
+  const pathname = usePathname();
   const menuz = [
     {
-      name: "About Us",
-      link: "/#about",
+      name: "For Company",
+      link: "/company",
     },
     {
-      name: "Our Services",
-      link: "/#services",
+      name: "For Candidates",
+      link: "/candidates",
+    },
+    {
+      name: "About Us",
+      link: "/about",
+    },
+    {
+      name: "Blog",
+      link: "/blog",
     },
   ];
 
@@ -41,9 +44,9 @@ export default function MobileNav() {
             setDrawerState(true);
           }
         }}
-        className="relative inline-flex cursor-pointer  darks:bg-darkGray  md:hidden font-Gilroy "
+        className="relative inline-flex cursor-pointer   lg:hidden font-lato "
       >
-        <CiMenuFries className="text-[32px] md:hidden flex text-white" />
+        <CiMenuFries className="text-[32px] lg:hidden flex text-mainBlack" />
       </div>
       <Drawer
         isOpen={drawerState}
@@ -55,12 +58,7 @@ export default function MobileNav() {
           <header className="border-b-[.5px] border-lightGrayBorder px-0  darks:border-[#2f3030] md:px-[40px]">
             <div className="flex items-center justify-between gap-2 font-Gilroy my-2">
               <Link href={"/"}>
-                <Image
-                  src={logo}
-                  width={110}
-                  height={60}
-                  alt={"Earthorex Logo"}
-                />
+                <Image src={logo} width={110} height={60} alt={"Mashr logo"} />
               </Link>
 
               <ActionIcon
@@ -75,28 +73,30 @@ export default function MobileNav() {
             </div>
           </header>
 
-          <div className=" px-0 pb-4 text-mainBlack darks:border-[#2f3030] md:px-[40px]">
+          <div className=" px-0 pb-4  darks:border-[#2f3030] md:px-[40px]">
             <div className="py-4">
-              {menuz.map((item, index) => (
-                <div key={index} onClick={() => setDrawerState(false)}>
-                  <Link
-                    href={item.link}
-                    className="flex flex-col gap-8 divide-x-4 cursor-pointer"
-                  >
-                    <div
-                      key={index}
-                      className="group flex cursor-pointer items-center justify-start gap-2 rounded-[5px]  p-2 hover:border-l-[4px] hover:bg-[#E9EEF9] hover:text-primary"
+              {menuz.map((item, index) => {
+                const isActive = pathname === item.link;
+                return (
+                  <div key={index} onClick={() => setDrawerState(false)}>
+                    <Link
+                      href={item.link}
+                      className="flex flex-col gap-8 divide-x-4 cursor-pointer"
                     >
-                      <NormalText
-                        text={item.name}
-                        color={"text-mainBlack"}
-                        size={"text-[16px]"}
-                        bold={true}
-                      />
-                    </div>
-                  </Link>
-                </div>
-              ))}
+                      <div
+                        key={index}
+                        className="group flex cursor-pointer items-center justify-start gap-2 rounded-[5px]  p-2 hover:border-l-[4px] hover:bg-[#E9EEF9] hover:text-primary"
+                      >
+                        <NormalText
+                          text={item.name}
+                          color={`${isActive ? "font-semibold" : "font-normal"}`}
+                          size={"text-[16px]"}
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

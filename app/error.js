@@ -5,14 +5,13 @@ import PageStarter from "@/components/section/PageStarter";
 import Link from "next/link";
 import PageBorders from "@/components/Wrappers/PageBorders";
 import MainText from "@/components/typography/MainText";
-import TitleText from "@/components/typography/TitleText";
 
 export default function Page() {
   return (
     <center className="min-h-screen grid grid-cols-1 justify-items-center">
       <div className=" divide-y-8 flex flex-col justify-start items-center text-center ">
         <PageBorders>
-          <TitleText
+          <MainText
             text={"An Error Occured"}
             color={"text-[#131313]"}
             size={

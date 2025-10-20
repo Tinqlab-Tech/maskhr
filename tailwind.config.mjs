@@ -9,15 +9,25 @@ export default {
   ],
   theme: {
     fontFamily: {
-      Gilroy: ["var(--font-Gilroy)"],
+      Gilroy: ["var(--font-lato)"],
     },
     extend: {
       colors: {
         primary: "#0E69EF",
-        mainBlack: "#131313",
+        secondary: "#999999",
+        mainBlack: "#000000",
+        lightGray: "#FAFAFA",
+        darkGray: "#1B1B1B",
       },
       backgroundImage: {
-        herobg: "url('/images/header.jpg')",
+        herobg: "url('/images/herobg.png')",
+        IntersectUp: "url('/images/IntersectUp.png')",
+        IntersectDown: "url('/images/IntersectDown.png')",
+        features4: "url('/images/featuresbg/features4.png')",
+      },
+      boxShadow: {
+        "custom-primary": "4px 4px 25px 0 rgba(27, 27, 27, 1)",
+        "custom-secondary": "4px 4px 25px 0 rgba(107, 114, 128, 0.2)",
       },
     },
   },

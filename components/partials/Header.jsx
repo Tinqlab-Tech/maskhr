@@ -3,75 +3,53 @@
 import Link from "next/link";
 import ImageWrapper from "../Wrappers/ImageWrapper";
 import logo from "@/public/images/logo.png";
-import usicon from "@/public/images/usicon.png";
 import NavItem from "../typography/NavItem";
 import MobileNav from "./MobileNav";
-import { ContactUsModal } from "../forms/ContactUsModal";
-import HomepageHero from "../hero/HomepageHero";
 import { usePathname } from "next/navigation";
 import { LanguageSwitcher } from "./../language-switcher";
+import { MainButton } from "../button/MainButton";
 
 export default function Header() {
   // const t = useTranslations("Menu");
   const pathname = usePathname();
 
+  const navigations = [
+    { path: "/", title: "Why MaskHR?" },
+    { path: "/company", title: "For Company" },
+    { path: "/candidates", title: "For Candidates" },
+  ];
+
   return (
-    <header className="bg-hero bg-cover bg-no-repeat  ">
-      <div className="flex justify-between items-center sticky top-0 z-50 bg-black/50 py-[20px] px-[20px] lg:px-[80px]  md:px-[40px] ">
+    <header className="bg-herobg bg-cover bg-no-repeat  ">
+      <div className="flex justify-between items-center gap-4 sticky  py-[4vh] px-[6vw] ">
         {" "}
         <Link href={"/"}>
-          <ImageWrapper
-            src={logo}
-            width={140}
-            height={80}
-            alt={"Earthorex logo"}
-            style={"darks:hidden"}
-          />
+          <ImageWrapper src={logo} width={140} height={80} alt={"Mask Hr"} />
         </Link>
-        <div className="flex items-center justify-end gap-2 md:gap-2 lg:gap-8">
-          <div className=" hidden md:flex items-center justify-end gap-2 md:gap-8 ">
-            <div className="flex gap-1 items-center justify-start">
-              {" "}
-              {/* <ImageWrapper
-                src={usicon}
-                width={20}
-                height={20}
-                alt={"United states flag"}
-                style={""}
-              />
-              <NavItem text={"EN"} /> */}
-              <LanguageSwitcher />
-            </div>
-            <Link href={"/#about"}>
-              {" "}
-              <NavItem text={"About Us"} />
-            </Link>
-            <Link href={"/#services"}>
-              {" "}
-              <NavItem text={"Our Services"} />
-            </Link>
+        <div className=" hidden lg:flex items-center  gap-4 md:gap-8 ">
+          {navigations.map((item, index) => {
+            const isActive = pathname === item.path;
 
-            <ContactUsModal btnText={"Contact Us"} />
-          </div>
-          <div className="flex gap-4 justify-end items-center md:hidden">
-            <div className="">
-              <div className="flex gap-1 items-center justify-start">
-                {" "}
-                <LanguageSwitcher />
-              </div>
-            </div>
-
-            <MobileNav />
-          </div>
+            return (
+              <Link key={index} href={item.path}>
+                <NavItem
+                  text={item.title}
+                  textColor={`${
+                    isActive
+                      ? "text-mainBlack"
+                      : "text-mainBlack/50 hover:text-mainBlack  hover:font-semibold"
+                  }`}
+                />
+              </Link>
+            );
+          })}{" "}
+        </div>
+        <div className="flex gap-4 md:gap-8 items-center">
+          <LanguageSwitcher />
+          <MainButton text={"Start Hiring"} hasIcon={true} />
+          <MobileNav />
         </div>
       </div>
-      {pathname === "/" ? (
-        <div className="flex justify-center items-center bg-black/50 ">
-          <HomepageHero />
-        </div>
-      ) : (
-        <></>
-      )}
     </header>
   );
 }

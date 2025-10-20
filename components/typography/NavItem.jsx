@@ -1,7 +1,7 @@
-export default function NavItem({ text, link }) {
+export default function NavItem({ text, textColor }) {
   return (
     <nav
-      className={`text-white group text-[16px] hover:font-bold font-Gilroy font-normal hover:text-primary cursor-pointer`}
+      className={`${textColor ? textColor : "text-mainBlack/50"} group text-[16px]  font-Gilroy font-normal font-lato  cursor-pointer tracking-tight`}
     >
       {text}
     </nav>
