@@ -23,7 +23,10 @@ export default {
         herobg: "url('/images/herobg.png')",
         IntersectUp: "url('/images/IntersectUp.png')",
         IntersectDown: "url('/images/IntersectDown.png')",
+        features1: "url('/images/featuresbg/features1.png')",
+        features2: "url('/images/featuresbg/features2.png')",
         features4: "url('/images/featuresbg/features4.png')",
+        features5: "url('/images/featuresbg/features5.png')",
       },
       boxShadow: {
         "custom-primary": "4px 4px 25px 0 rgba(27, 27, 27, 1)",

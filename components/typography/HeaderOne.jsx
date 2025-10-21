@@ -5,7 +5,7 @@ export const HeaderOne = ({ text, color, size, textLeft }) => {
     <h1
       className={` ${color ? color : "text-mainBlack"} ${
         size ? size : "text-[32px] leading-[38px]"
-      } ${textLeft === true ? "text-left" : "text-center"} font-bold font-lato`}
+      }  ${textLeft === true ? "text-center md:text-left" : "text-center"} font-bold font-lato`}
     >
       {text}
     </h1>

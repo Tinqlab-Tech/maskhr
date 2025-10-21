@@ -25,7 +25,7 @@ import vector5 from "@/public/images/icons/vector5.png";
 import ConceptCard from "@/components/card/ConceptCard";
 import LightPageStarter from "@/components/section/LightPageStarter";
 import TechStack from "@/components/card/TechStack";
-import MainCard from "@/components/card/MainCard";
+import MainCard from "@/components/card/BlogCard";
 import { MainButton } from "@/components/button/MainButton";
 import Link from "next/link";
 import MainText from "@/components/typography/MainText";
