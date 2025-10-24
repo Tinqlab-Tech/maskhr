@@ -29,8 +29,23 @@ export default {
         features5: "url('/images/featuresbg/features5.png')",
       },
       boxShadow: {
-        "custom-primary": "4px 4px 25px 0 rgba(27, 27, 27, 1)",
+        "custom-primary": "4px 4px 25px 0 rgba(90, 103, 216, 0.2)",
         "custom-secondary": "4px 4px 25px 0 rgba(107, 114, 128, 0.2)",
+      },
+      keyframes: {
+        pop: {
+          "0%": { transform: "scale(0.5)", opacity: "0" },
+          "80%": { transform: "scale(1.2)", opacity: "1" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        fadeIn: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
+      },
+      animation: {
+        pop: "pop 0.4s ease-out",
+        fadeIn: "fadeIn 0.6s ease-in",
       },
     },
   },

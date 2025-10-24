@@ -181,7 +181,7 @@ export default function Home() {
               }
             />
             <div className="grid justify-items-center">
-              <LoginForm />
+              <LoginForm btnText={"Register Now"} />
             </div>
           </div>
         </DoublePageBorders>
