@@ -196,7 +196,9 @@ export default function Home() {
       <MainHero
         title={titleText}
         titleSize="text-[60px]"
+        btnLink1={"/"}
         btnText1="Find Talents"
+        btnLink2={"/"}
         btnText2="Find Job"
         hasTech={true}
         technologies={technologies}

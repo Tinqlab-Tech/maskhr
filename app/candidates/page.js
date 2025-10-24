@@ -179,6 +179,7 @@ export default function Home() {
           "We'll connect you with a life-changing work opportunity and career path."
         }
         titleSize="text-[50px] leading-[50px]"
+        btnLink1={"/"}
         btnText1="Find Job"
         hasTech={true}
         technologies={technologies}

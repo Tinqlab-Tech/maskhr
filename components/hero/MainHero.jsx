@@ -4,6 +4,7 @@ import MainText from "../typography/MainText";
 import { MainButton } from "../button/MainButton";
 import { OutlineButton } from "../button/OutlineButton";
 import ImageWrapper from "../Wrappers/ImageWrapper";
+import Link from "next/link";
 
 const MainHero = ({
   title = [], // expects an array of { text, color }
@@ -13,6 +14,8 @@ const MainHero = ({
   hasTech,
   technologies = [],
   titleSize,
+  btnLink1,
+  btnLink2,
 }) => {
   const positions = [
     "top-5 left-60",
@@ -47,8 +50,16 @@ const MainHero = ({
 
           {/* Buttons */}
           <div className="flex gap-4 md:gap-8 mt-4">
-            {btnText1 && <MainButton text={btnText1} hasIcon={true} />}
-            {btnText2 && <OutlineButton text={btnText2} hasIcon={true} />}
+            {btnText1 && btnLink1 && (
+              <Link href={btnLink1}>
+                <MainButton text={btnText1} hasIcon={true} />
+              </Link>
+            )}
+            {btnText2 && btnLink2 && (
+              <Link href={btnLink2}>
+                <OutlineButton text={btnText2} hasIcon={true} />
+              </Link>
+            )}
           </div>
 
           {/* Floating Tech Icons */}

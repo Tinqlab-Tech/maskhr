@@ -74,7 +74,7 @@ export default function Home() {
               alt="Mask Hr is global"
               width={1440}
               height={950}
-              style="w-full bg-features8 bg-cover bg-top bg-no-repeat"
+              style="w-full  bg-cover bg-top bg-no-repeat"
             />
             {/* text */}
             <div className="grid md:grid-cols-2 gap-4 md:gap-8">
@@ -122,7 +122,7 @@ export default function Home() {
               alt="Mask Hr is global"
               width={1440}
               height={950}
-              style="w-full bfeatures8g- bg-cover bg-top bg-no-repeat"
+              style="w-full  bg-cover bg-top bg-no-repeat"
             />
             <div className="flex flex-col gap-4  md:gap-8 justify-center">
               <HeaderOne text={"Dream Until Your Come True"} textLeft={true} />
@@ -213,7 +213,7 @@ export default function Home() {
             alt="Mask Hr is global"
             width={1440}
             height={470}
-            style="w-full bg-features8 bg-cover bg-top bg-no-repeat"
+            style="w-full  bg-cover bg-top bg-no-repeat"
           />
         </PageBorders>
         <DoublePageBorders

@@ -177,6 +177,7 @@ export default function Home() {
           "Seamlessly integrate top remote talents to your team all on your own terms. MaskHR will provide you round the clock cover for your hiring process."
         }
         titleSize="text-[50px] leading-[50px]"
+        btnLink1={"/"}
         btnText1="Find Talents"
         hasTech={true}
         technologies={technologies}
