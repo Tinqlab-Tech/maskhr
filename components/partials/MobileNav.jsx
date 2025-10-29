@@ -44,9 +44,9 @@ export default function MobileNav() {
             setDrawerState(true);
           }
         }}
-        className="relative inline-flex cursor-pointer   lg:hidden font-lato "
+        className="relative inline-flex cursor-pointer   md:hidden font-lato "
       >
-        <CiMenuFries className="text-[32px] lg:hidden flex text-mainBlack" />
+        <CiMenuFries className="text-[32px] md:hidden flex text-mainBlack" />
       </div>
       <Drawer
         isOpen={drawerState}

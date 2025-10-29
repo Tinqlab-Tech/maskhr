@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import MainText from "../typography/MainText";
-import { useForm } from "react-hook-form";
-import { postData } from "@/services/index";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import React, { useState, useEffect } from 'react';
+import MainText from '../typography/MainText';
+import { useForm } from 'react-hook-form';
+import { postData } from '@/services/index';
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
 const SignUpForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,19 +33,19 @@ const SignUpForm = () => {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const res = await postData("message/add", { ...data, from: "MaskHr" });
+      const res = await postData('message/add', { ...data, from: 'MaskHr' });
 
       if (res.success) {
-        setResponse({ type: "success" });
+        setResponse({ type: 'success' });
         reset(); // <-- Clear all fields after success
       } else {
-        setResponse({ type: "error" });
+        setResponse({ type: 'error' });
       }
 
       // Remove response after 5 seconds
       setTimeout(() => setResponse(null), 5000);
     } catch (error) {
-      setResponse({ type: "error" });
+      setResponse({ type: 'error' });
       setTimeout(() => setResponse(null), 5000);
     } finally {
       setTimeout(() => setIsLoading(false), 500);
@@ -53,8 +53,8 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center p-6 bg-lightGray rounded-[20px]">
-      <div className="block p-4 bg-white rounded-[30px] space-y-5 w-full max-w-md">
+    <div className="flex items-center justify-center rounded-[20px] bg-lightGray p-6">
+      <div className="block w-full max-w-md space-y-5 rounded-[30px] bg-white p-4">
         {/* Header */}
         <div className="flex flex-col items-center justify-center">
           <MainText text="Welcome to MaskHR" bold />
@@ -68,8 +68,8 @@ const SignUpForm = () => {
             <input
               type="text"
               placeholder="Enter your full name"
-              className="border border-secondary outline-none focus:shadow-custom-secondary p-2 w-full rounded-[10px]"
-              {...register("fullName", { required: true })}
+              className="w-full rounded-[10px] border border-secondary p-2 outline-none focus:shadow-custom-secondary"
+              {...register('fullName', { required: true })}
             />
             {errors.fullName && (
               <span className="text-xs text-red-400">
@@ -83,8 +83,8 @@ const SignUpForm = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="border border-secondary outline-none focus:shadow-custom-secondary p-2 w-full rounded-[10px]"
-              {...register("Email", { required: true })}
+              className="w-full rounded-[10px] border border-secondary p-2 outline-none focus:shadow-custom-secondary"
+              {...register('Email', { required: true })}
             />
             {errors.Email && (
               <span className="text-xs text-red-400">Email is required</span>
@@ -96,8 +96,8 @@ const SignUpForm = () => {
             <input
               type="password"
               placeholder="Enter your password"
-              className="border border-secondary outline-none focus:shadow-custom-secondary p-2 w-full rounded-[10px]"
-              {...register("Password", { required: true })}
+              className="w-full rounded-[10px] border border-secondary p-2 outline-none focus:shadow-custom-secondary"
+              {...register('Password', { required: true })}
             />
             {errors.Password && (
               <span className="text-xs text-red-400">Password is required</span>
@@ -105,41 +105,41 @@ const SignUpForm = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <input type="checkbox" {...register("agree")} />
+            <input type="checkbox" {...register('agree')} />
             <MainText text="I agree to the terms of use and privacy policy" />
           </div>
 
           <button
             type="submit"
             disabled={!isFormValid || isLoading}
-            className={`relative flex text-nowrap justify-center items-center gap-2 w-full bg-mainBlack p-2 rounded-[10px] shadow-custom-secondary transition-all duration-500 ${
+            className={`relative flex w-full items-center justify-center gap-2 text-nowrap rounded-[10px] bg-mainBlack p-2 shadow-custom-secondary transition-all duration-500 ${
               !isFormValid
-                ? "opacity-85 text-white/80 cursor-not-allowed"
-                : "opacity-100 font-semibold text-white hover:scale-105 active:scale-95"
+                ? 'cursor-not-allowed text-white/50 opacity-85'
+                : 'font-semibold text-white opacity-100 hover:scale-105 active:scale-95'
             }`}
           >
             {isLoading && (
-              <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+              <span className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
             )}
-            {response?.type === "success" && !isLoading && (
-              <FaCheckCircle className="text-green-400 text-xl animate-pop" />
+            {response?.type === 'success' && !isLoading && (
+              <FaCheckCircle className="animate-pop text-xl text-green-400" />
             )}
-            {response?.type === "error" && !isLoading && (
-              <FaTimesCircle className="text-red-400 text-xl animate-pop" />
+            {response?.type === 'error' && !isLoading && (
+              <FaTimesCircle className="animate-pop text-xl text-red-400" />
             )}
             {!isLoading && !response && <>Continue with Email</>}
           </button>
         </form>
 
         {/* Message outside */}
-        {response?.type === "success" && (
-          <p className="text-green-500 text-sm mt-4 animate-fadeIn">
-            ✅ Sign up successful!
+        {response?.type === 'success' && (
+          <p className="mt-4 animate-fadeIn text-sm text-green-500">
+            Sign up successful!
           </p>
         )}
-        {response?.type === "error" && (
-          <p className="text-red-500 text-sm mt-4 animate-fadeIn">
-            ❌ Something went wrong. Please try again.
+        {response?.type === 'error' && (
+          <p className="mt-4 animate-fadeIn text-sm text-red-500">
+            Something went wrong. Please try again.
           </p>
         )}
       </div>

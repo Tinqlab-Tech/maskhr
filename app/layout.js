@@ -1,35 +1,35 @@
-"use client";
+'use client';
 
-import "./globals.css";
+import './globals.css';
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-import React from "react";
+import React from 'react';
 // import Footer from "@/components/partials/Footer";
-import Header from "@/components/partials/Header";
-import localFont from "next/font/local";
-import Script from "next/script";
-import Footer from "@/components/partials/Footer";
+import Header from '@/components/partials/Header';
+import localFont from 'next/font/local';
+import Script from 'next/script';
+import Footer from '@/components/partials/Footer';
 
 //fonts
 const harmonyOs = localFont({
   src: [
     {
-      path: "./../fonts/Gilroy-Regular.ttf",
-      weight: "300",
-      style: "light",
+      path: './../fonts/Gilroy-Regular.ttf',
+      weight: '300',
+      style: 'light',
     },
     {
-      path: "./../fonts/Gilroy-Regular.ttf",
-      weight: "400",
-      style: "normal",
+      path: './../fonts/Gilroy-Regular.ttf',
+      weight: '400',
+      style: 'normal',
     },
     {
-      path: "./../fonts/Gilroy-Bold.ttf",
-      weight: "700",
-      style: "bold",
+      path: './../fonts/Gilroy-Bold.ttf',
+      weight: '700',
+      style: 'bold',
     },
   ],
-  variable: "--font-Gilroy",
+  variable: '--font-Gilroy',
 });
 
 export default function RootLayout({ children }) {

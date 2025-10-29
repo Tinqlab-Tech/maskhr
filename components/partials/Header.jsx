@@ -26,7 +26,7 @@ export default function Header() {
         <Link href={"/"}>
           <ImageWrapper src={logo} width={140} height={80} alt={"Mask Hr"} />
         </Link>
-        <div className=" hidden lg:flex items-center  gap-4 md:gap-8 ">
+        <div className=" hidden md:flex items-center  gap-4 md:gap-8 ">
           {navigations.map((item, index) => {
             const isActive = pathname === item.path;
 
@@ -44,7 +44,7 @@ export default function Header() {
             );
           })}{" "}
         </div>
-        <div className="flex gap-4 md:gap-8 items-center">
+        <div className="flex gap-4 lg:gap-8 items-center">
           <LanguageSwitcher />
           <MainButton text={"Start Hiring"} hasIcon={true} />
           <MobileNav />

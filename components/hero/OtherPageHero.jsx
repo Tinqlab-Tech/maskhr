@@ -1,21 +1,22 @@
-import React from "react";
-import MainText from "../typography/MainText";
+import React from 'react';
+import MainText from '../typography/MainText';
+import ComponentAnimationOne from '@/animations/ComponentAnimationOne';
+import OtherAnimation from '@/animations/OthherAnimationn';
 
 const OtherPageHero = ({ title, subtitle }) => {
   return (
-    <div className="h-screen bg-herobg bg-cover bg-no-repeat bg-center py-[4vh] px-[6vw] ">
-      <section className="flex   h-full  flex-col gap-4  items-center justify-center text-center mx-auto  md:w-3/4 ">
-        <h1
-          className={`text-[50px] leading-[50px tracking-tight font-bold font-lato`}
-        >
-          {title}
-        </h1>
-
-        <div className="px-[6vw] md:px-[8vw]">
-          <MainText text={subtitle} color="text-mainBlack/50" />{" "}
+    <section className="h-screen bg-herobg bg-cover bg-center bg-no-repeat px-[6vw] py-[4vh]">
+      <OtherAnimation>
+        <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
+          <h1 className="font-lato text-[50px] font-bold leading-[50px] tracking-tight">
+            {title}
+          </h1>
+          <div className="px-[6vw] md:px-[8vw]">
+            <MainText text={subtitle} color="text-mainBlack/50" />
+          </div>
         </div>
-      </section>
-    </div>
+      </OtherAnimation>
+    </section>
   );
 };
 

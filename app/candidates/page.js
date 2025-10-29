@@ -1,172 +1,125 @@
-import MainHero from "@/components/hero/MainHero";
-import TextLeftPageStarter from "@/components/section/TextLeftPageStarter";
-import PageBorders from "@/components/Wrappers/PageBorders";
-import react from "@/public/images/tech/React.png";
-import angular from "@/public/images/tech/Angular.png";
-import swift from "@/public/images/tech/Swift.png";
-import python from "@/public/images/tech/Python.png";
-import vue from "@/public/images/tech/vue.png";
-import figma from "@/public/images/tech/figma2.png";
-import boxfigma from "@/public/images/tech/Figma.png";
-import callCenter from "@/public/images/tech/callCenter.png";
-import aws from "@/public/images/tech/Aws.png";
-import headphone from "@/public/images/tech/headphone.png";
-import zendex from "@/public/images/tech/Zendex.png";
-import translators from "@/public/images/tech/translators.png";
-import PageStarter from "@/components/section/PageStarter";
-import HiringCard from "@/components/card/HiringCard";
-import features2 from "@/public/images/featuresbg/features2.png";
-import features3 from "@/public/images/featuresbg/features3.png";
-import vector1 from "@/public/images/icons/vector1.png";
-import vector2 from "@/public/images/icons/vector2.png";
-import vector3 from "@/public/images/icons/vector3.png";
-import vector4 from "@/public/images/icons/vector4.png";
-import vector5 from "@/public/images/icons/vector5.png";
-import ConceptCard from "@/components/card/ConceptCard";
-import LightPageStarter from "@/components/section/LightPageStarter";
-import TechStack from "@/components/card/TechStack";
-import MainCard from "@/components/card/BlogCard";
-import { MainButton } from "@/components/button/MainButton";
-import Link from "next/link";
-import MainText from "@/components/typography/MainText";
-import BenefitCard from "@/components/card/BenefitCard";
-import ImageWrapper from "@/components/Wrappers/ImageWrapper";
-import maxwell from "@/public/images/maxwell.png";
-import DoublePageBorders from "@/components/Wrappers/DoublePageBorders";
-import LogoWhite from "@/public/images/logoWhite.png";
-import LoginForm from "@/components/form/LoginForm";
-import Verification from "@/components/section/Verification";
-import SignUpForm from "@/components/form/SignUpForm";
+import MainHero from '@/components/hero/MainHero';
+import TextLeftPageStarter from '@/components/section/TextLeftPageStarter';
+import PageBorders from '@/components/Wrappers/PageBorders';
+import react from '@/public/images/tech/React.png';
+import angular from '@/public/images/tech/Angular.png';
+import swift from '@/public/images/tech/Swift.png';
+import python from '@/public/images/tech/Python.png';
+import vue from '@/public/images/tech/vue.png';
+import figma from '@/public/images/tech/figma2.png';
+import boxfigma from '@/public/images/tech/Figma.png';
+import callCenter from '@/public/images/tech/callCenter.png';
+import aws from '@/public/images/tech/Aws.png';
+import headphone from '@/public/images/tech/headphone.png';
+import zendex from '@/public/images/tech/Zendex.png';
+import translators from '@/public/images/tech/translators.png';
+import PageStarter from '@/components/section/PageStarter';
+import HiringCard from '@/components/card/HiringCard';
+import features2 from '@/public/images/featuresbg/features2.png';
+import features3 from '@/public/images/featuresbg/features3.png';
+import vector1 from '@/public/images/icons/vector1.png';
+import vector2 from '@/public/images/icons/vector2.png';
+import vector3 from '@/public/images/icons/vector3.png';
+import vector4 from '@/public/images/icons/vector4.png';
+import vector5 from '@/public/images/icons/vector5.png';
+import ConceptCard from '@/components/card/ConceptCard';
+import LightPageStarter from '@/components/section/LightPageStarter';
+import TechStack from '@/components/card/TechStack';
+import MainCard from '@/components/card/BlogCard';
+import { MainButton } from '@/components/button/MainButton';
+import Link from 'next/link';
+import MainText from '@/components/typography/MainText';
+import BenefitCard from '@/components/card/BenefitCard';
+import ImageWrapper from '@/components/Wrappers/ImageWrapper';
+import maxwell from '@/public/images/maxwell.png';
+import DoublePageBorders from '@/components/Wrappers/DoublePageBorders';
+import LogoWhite from '@/public/images/logoWhite.png';
+import LoginForm from '@/components/form/LoginForm';
+import Verification from '@/components/section/Verification';
+import SignUpForm from '@/components/form/SignUpForm';
+import features1 from '@/public/images/featuresbg/features1.png';
+import ComponentAnimationOne from '@/animations/ComponentAnimationOne';
+import ComponentAnimationTwo from '@/animations/ComponentAnimationTwo';
 
 export const metadata = {
-  title: "Mask HR",
-  description: "Welcome to Mask HR",
+  title: 'Mask HR',
+  description: 'Welcome to Mask HR',
 };
 
 export default function Home() {
   const technologies = [boxfigma, headphone, react, aws, callCenter, python];
 
   const titleText = [
-    { text: "Mask it,", color: "text-mainBlack" },
-    { text: "Find Flexible", color: "text-primary" },
-    { text: "Opportunities", color: "text-mainBlack" },
-    { text: "With", color: "text-mainBlack" },
+    { text: 'Mask it,', color: 'text-mainBlack' },
+    { text: 'Find Flexible', color: 'text-primary' },
+    { text: 'Opportunities', color: 'text-mainBlack' },
+    { text: 'With', color: 'text-mainBlack' },
 
-    { text: "Growth", color: "text-primary" },
-    { text: "Potential", color: "mainBlack" },
+    { text: 'Growth', color: 'text-primary' },
+    { text: 'Potential', color: 'mainBlack' },
   ];
 
   const weHire = [
     {
-      title: "Earn More",
-      bgImg: angular,
+      title: 'Earn More',
+      rate: '65%',
       subtitle:
-        "Discover the power of MaskHR by leveraging our rich talent pool to to take your team to the next level while creating a healthy work culture in your organization  ",
-      cardType: "type1",
+        'Discover the power of MaskHR by leveraging our rich talent pool to to take your team to the next level while creating a healthy work culture in your organization  ',
+      cardType: 'type1',
     },
     {
-      title: "Find Remote Roles",
+      title: 'Find Remote Roles',
       bgImg: features2,
       subtitle:
-        "Discover the power of MaskHR by leveraging our rich talent pool to to take your team to the next level while creating a healthy work culture in your organization  ",
-      cardType: "type2",
+        'Discover the power of MaskHR by leveraging our rich talent pool to to take your team to the next level while creating a healthy work culture in your organization  ',
+      cardType: 'type2',
     },
     {
-      title: "We Focus On Growth",
+      title: 'We Focus On Growth',
       bgImg: features3,
       subtitle:
-        "Discover the power of MaskHR by leveraging our rich talent pool to to take your team to the next level while creating a healthy work culture in your organization  ",
+        'Discover the power of MaskHR by leveraging our rich talent pool to to take your team to the next level while creating a healthy work culture in your organization  ',
 
-      cardType: "type2",
+      cardType: 'type2',
     },
     {
-      title: "Continuous Mentoring ",
-      bgImg: angular,
+      title: 'Continuous Mentoring ',
+      bgImg: features1,
       subtitle:
-        "Most companies are already working remotely in some capacity, making it easy to add MaskHR team members. The team members are hired and paid by us, but work like any other remote hire would at your company via a staff augmentation model.",
-      cardType: "type1",
+        'Most companies are already working remotely in some capacity, making it easy to add MaskHR team members. The team members are hired and paid by us, but work like any other remote hire would at your company via a staff augmentation model.',
+      cardType: 'type1',
     },
   ];
 
   const weInnovate = [
     {
-      title: "Apply",
-      subtitle: "Interested talents sign-up onMaskhr and creates profile",
+      title: 'Apply',
+      subtitle: 'Interested talents sign-up onMaskhr and creates profile',
     },
     {
-      title: "Prepare",
+      title: 'Prepare',
       subtitle:
-        "Applicants skills and qualification will be evaluated by AI & Humans ",
+        'Applicants skills and qualification will be evaluated by AI & Humans ',
     },
     {
-      title: "Interview",
+      title: 'Interview',
       subtitle:
-        "Upon passing the test, talents are activated onMaskhr and will be available for projects",
-    },
-  ];
-
-  const techWeUse = [
-    {
-      icon: figma,
-      title: "UI/UX Designers",
-    },
-    {
-      icon: aws,
-      title: "Data Entry",
-    },
-    {
-      icon: callCenter,
-      title: "Call Center Associates",
-    },
-    {
-      icon: python,
-      title: "Developers",
-    },
-    {
-      icon: zendex,
-      title: "Live chat/email support",
-    },
-    {
-      icon: translators,
-      title: "Translators",
+        'Upon passing the test, talents are activated onMaskhr and will be available for projects',
     },
   ];
 
   const staffingInsight = [
     {
-      subtitle: "Find Verified Experts with Industry Level Experience",
-      badge: "Old-school ways",
-      badgeColor: "bg-lightGray text-mainBlack",
-      bgColor: "bg-secondary text-mainBlack",
+      subtitle: 'Find Verified Experts with Industry Level Experience',
+      badge: 'Old-school ways',
+      badgeColor: 'bg-lightGray text-mainBlack',
+      bgColor: 'bg-secondary text-mainBlack',
     },
     {
-      subtitle: "Find Verified Experts with Industry Level Experience",
-      badge: "The New Way",
-      badgeColor: "bg-primary text-white",
-      bgColor: "bg-mainBlack text-white",
-    },
-  ];
-
-  const ourAdvantages = [
-    {
-      bgImg: "bg-darkGray",
-      title: "Technology / Software",
-      subtitle:
-        "We work with Experience individuals whose talents we have carefully vetted and handpicked into our talent pool. This ensures we consistently ",
-    },
-
-    {
-      bgImg: "bg-darkGray",
-      title: "Insurance / Healthcare",
-      subtitle:
-        "We work with Experience individuals whose talents we have carefully vetted and handpicked into our talent pool. This ensures we consistently ",
-    },
-
-    {
-      bgImg: "bg-darkGray",
-      title: "Direct sales Organisations",
-      subtitle:
-        "We work with Experience individuals whose talents we have carefully vetted and handpicked into our talent pool. This ensures we consistently ",
+      subtitle: 'Find Verified Experts with Industry Level Experience',
+      badge: 'The New Way',
+      badgeColor: 'bg-primary text-white',
+      bgColor: 'bg-mainBlack text-white',
     },
   ];
 
@@ -179,7 +132,7 @@ export default function Home() {
           "We'll connect you with a life-changing work opportunity and career path."
         }
         titleSize="text-[50px] leading-[50px]"
-        btnLink1={"/"}
+        btnLink1={'/'}
         btnText1="Find Job"
         hasTech={true}
         technologies={technologies}
@@ -189,24 +142,29 @@ export default function Home() {
           <PageStarter
             hasBadge={true}
             badgeIcon={vector1}
-            badgeText={"Boosting Recruitment Process"}
-            title={"Revolutionizing Remote Work for Maximum Growth"}
+            badgeText={'Boosting Recruitment Process'}
+            title={'Revolutionizing Remote Work for Maximum Growth'}
             subtitle={
-              "Learn new skills, find compactible roles with growth opportunities. Our jobs provides great flexibility forall available opening. "
+              'Learn new skills, find compactible roles with growth opportunities. Our jobs provides great flexibility forall available opening. '
             }
           />
 
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             {weHire.map((item, index) => (
-              <div key={index} className="flex items-stretch">
-                {" "}
+              <ComponentAnimationOne
+                key={index}
+                delay={index * 0.2}
+                className="flex items-stretch"
+              >
+                {' '}
                 <HiringCard
                   title={item.title}
                   bgImg={item.bgImg}
+                  rate={item.rate}
                   subtitle={item.subtitle}
                   cardType={item.cardType}
-                />{" "}
-              </div>
+                />{' '}
+              </ComponentAnimationOne>
             ))}
           </div>
         </div>
@@ -216,28 +174,33 @@ export default function Home() {
           <PageStarter
             hasBadge={true}
             badgeIcon={vector2}
-            badgeText={"Connecting talents to teams"}
-            title={"How it Works"}
+            badgeText={'Connecting talents to teams'}
+            title={'How it Works'}
             subtitle={
-              "We work with Experience individuals whose talents we have carefully vetted and handpicked intoour talent pool. This ensures we consistently deliver high end results."
+              'We work with Experience individuals whose talents we have carefully vetted and handpicked intoour talent pool. This ensures we consistently deliver high end results.'
             }
-          />
-          <div className="grid md:grid-cols-3 gap-0">
-            {weInnovate.map((item, index) => (
-              <div key={index}>
-                {" "}
-                <ConceptCard
-                  index={index + 1}
-                  title={item.title}
-                  subtitle={item.subtitle}
-                />{" "}
-              </div>
-            ))}
-          </div>
+          />{' '}
+          <ComponentAnimationOne>
+            <div className="grid gap-0 md:grid-cols-3">
+              {weInnovate.map((item, index) => (
+                <div key={index}>
+                  {' '}
+                  <ConceptCard
+                    index={index + 1}
+                    title={item.title}
+                    subtitle={item.subtitle}
+                  />{' '}
+                </div>
+              ))}
+            </div>
+          </ComponentAnimationOne>
         </div>
       </PageBorders>
       <DoublePageBorders>
-        <SignUpForm />
+        <ComponentAnimationTwo duration={1.5} x={-100}>
+          {' '}
+          <SignUpForm />
+        </ComponentAnimationTwo>
       </DoublePageBorders>
 
       <PageBorders>
@@ -245,58 +208,64 @@ export default function Home() {
           <PageStarter
             hasBadge={true}
             badgeIcon={vector5}
-            badgeText={"Our Model"}
-            title={"Staffing the New Way"}
+            badgeText={'Our Model'}
+            title={'Staffing the New Way'}
             subtitle={
-              "Explore the latest trends, tips, and innovations in recruitments. Our blog offers expert insights to keep you at the forefront of recent openings.   "
+              'Explore the latest trends, tips, and innovations in recruitments. Our blog offers expert insights to keep you at the forefront of recent openings.   '
             }
           />
-          <div className="grid md:grid-cols-2   gap-4 md:gap-8">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             {staffingInsight.map((item, index) => (
-              <div key={index}>
-                {" "}
-                <div className="flex flex-col gap-4 md:gap-8  items-center">
+              <ComponentAnimationOne
+                key={index}
+                delay={index * 0.2}
+                className="flex items-stretch"
+              >
+                {' '}
+                <div className="flex flex-col items-center gap-4 md:gap-8">
                   <span
-                    className={`${item.badgeColor} font-semibold px-[20px]  py-[15px] text-[14px]  rounded-[24px] shadow-custom-secondary w-fit`}
+                    className={`${item.badgeColor} w-fit rounded-[24px] px-[20px] py-[15px] text-[14px] font-semibold shadow-custom-secondary`}
                   >
                     {item.badge}
                   </span>
                   <div
-                    className={`${item.bgColor} flex flex-col p-[20px]  md:p-[30px] items-center  justify-center rounded-[10px] md:rounded-[20px] shadow-custom-secondary min-h-[40vh]`}
+                    className={`${item.bgColor} flex min-h-[40vh] flex-col items-center justify-center rounded-[10px] p-[20px] shadow-custom-secondary md:rounded-[20px] md:p-[30px]`}
                   >
-                    <p className="text-[18px] leading-[20px] tracking-normal  md:text-[22px]  md:leading-[28px]  font-semibold text-center  md:text-left  font-lato">
+                    <p className="font-lato text-center text-[18px] font-semibold leading-[20px] tracking-normal md:text-left md:text-[22px] md:leading-[28px]">
                       {item.subtitle}
                     </p>
                   </div>
                 </div>
-              </div>
+              </ComponentAnimationOne>
             ))}
           </div>
         </div>
       </PageBorders>
       <PageBorders padding={null}>
-        <Verification />{" "}
+        <Verification />{' '}
       </PageBorders>
       <DoublePageBorders
-        background={"bg-mainBlack bg-cover bg-no-repeat bg-center"}
+        background={'bg-mainBlack bg-cover bg-no-repeat bg-center'}
       >
-        <div className="flex flex-col gap-4 md:gap-8 " id="schedule">
+        <div className="flex flex-col gap-4 md:gap-8" id="schedule">
           <LightPageStarter
             icon={LogoWhite}
-            title={"Apply for a position at MaskHR"}
+            title={'Apply for a position at MaskHR'}
             subtitle={
-              "Fill out our application form to be considered for remote workopportunities"
+              'Fill out our application form to be considered for remote workopportunities'
             }
           />
-          <div className="grid justify-items-center">
-            <Link href={"/"}>
-              <MainButton
-                text={"Get Started"}
-                hasIcon={true}
-                bgcolor={"bg-darkGray"}
-              />
-            </Link>{" "}
-          </div>
+          <ComponentAnimationOne>
+            <div className="grid justify-items-center">
+              <Link href={'/'}>
+                <MainButton
+                  text={'Get Started'}
+                  hasIcon={true}
+                  bgcolor={'bg-darkGray'}
+                />
+              </Link>{' '}
+            </div>
+          </ComponentAnimationOne>
         </div>
       </DoublePageBorders>
     </div>
