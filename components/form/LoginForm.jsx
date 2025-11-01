@@ -66,7 +66,7 @@ const LoginForm = ({ btnText }) => {
           disabled={isLoading}
           className="relative flex items-center justify-center gap-2 text-nowrap rounded-[24px] bg-mainBlack px-[20px] py-[10px] text-white shadow-custom-secondary transition-all duration-500 hover:scale-105 active:scale-95"
         >
-          {/* 🔄 Loading Spinner */}
+          {/*  Loading Spinner */}
           {isLoading && (
             <span
               className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"
@@ -74,12 +74,12 @@ const LoginForm = ({ btnText }) => {
             ></span>
           )}
 
-          {/* ✅ Success Icon */}
+          {/* Success Icon */}
           {response?.type === 'success' && !isLoading && (
             <FaCheckCircle className="animate-pop text-xl text-green-400" />
           )}
 
-          {/* ❌ Error Icon */}
+          {/*  Error Icon */}
           {response?.type === 'error' && !isLoading && (
             <FaTimesCircle className="animate-pop text-xl text-red-400" />
           )}

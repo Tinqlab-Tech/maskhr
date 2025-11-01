@@ -256,7 +256,7 @@ export default function Home() {
           </ComponentAnimationOne>
         </PageBorders>
         <DoublePageBorders
-          background={'bg-mainBlack bg-cover bg-no-repeat bg-center'}
+          background={'bg-footerbg bg-cover bg-no-repeat bg-center'}
         >
           <div className="flex flex-col gap-4 md:gap-8" id="FAQs">
             <LightPageStarter

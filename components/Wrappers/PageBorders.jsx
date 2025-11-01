@@ -1,5 +1,5 @@
-import SectionAnimation from "@/animations/SectionAnimation";
-import { ReactNode } from "react";
+import SectionAnimation from '@/animations/SectionAnimation';
+import { ReactNode } from 'react';
 
 export default function PageBorders({ children, background, padding }) {
   return (
@@ -8,8 +8,8 @@ export default function PageBorders({ children, background, padding }) {
         className={`${
           background
             ? `${background} darks:bg-[#212124]`
-            : "bg-white darks:bg-[#212124]"
-        }          ${padding === null ? "" : "px-[4vw] py-[10vh] "}    `}
+            : 'darks:bg-[#212124] bg-white'
+        } ${padding === null ? '' : 'px-[4vw] py-[10vh]'} overflow-hidden`}
       >
         {children}
       </section>

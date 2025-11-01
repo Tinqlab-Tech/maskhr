@@ -340,7 +340,7 @@ export default function Home() {
         <Verification />{' '}
       </PageBorders>
       <DoublePageBorders
-        background={'bg-mainBlack bg-cover bg-no-repeat bg-center'}
+        background={'bg-footerbg bg-cover bg-no-repeat bg-center'}
       >
         <div className="flex flex-col gap-4 md:gap-8" id="contact">
           <LightPageStarter
