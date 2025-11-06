@@ -12,6 +12,7 @@ import PaginationButton from '@/components/button/PaginationButton';
 import features5 from '@/public/images/featuresbg/features5.png';
 import ComponentAnimationOne from '@/animations/ComponentAnimationOne';
 import ComponentAnimationTwo from '@/animations/ComponentAnimationTwo';
+import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Mask HR',
@@ -226,9 +227,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <ComponentAnimationOne duration={1.5}>
+            <Suspense fallback={<div>Loading pagination...</div>}>
               <PaginationButton />
-            </ComponentAnimationOne>
+            </Suspense>{' '}
           </div>
         </PageBorders>
       </div>
