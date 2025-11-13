@@ -7,7 +7,6 @@ import boxfigma from '@/public/images/tech/Figma.png';
 import aws from '@/public/images/tech/Aws.png';
 import headphone from '@/public/images/tech/headphone.png';
 import zendex from '@/public/images/tech/Zendex.png';
-import translators from '@/public/images/tech/translators.png';
 import PageStarter from '@/components/section/PageStarter';
 import HiringCard from '@/components/card/HiringCard';
 import features2 from '@/public/images/featuresbg/features2.png';
@@ -125,7 +124,7 @@ export default function Home() {
       title: 'Live chat/email support',
     },
     {
-      icon: translators,
+      icon: '/images/tech/translators.png',
       title: 'Translators',
     },
   ];
