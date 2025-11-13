@@ -3,7 +3,6 @@ import PageBorders from '@/components/Wrappers/PageBorders';
 import react from '@/public/images/tech/React.png';
 import python from '@/public/images/tech/Python.png';
 import boxfigma from '@/public/images/tech/Figma.png';
-import callCenter from '@/public/images/tech/callCenter.png';
 import aws from '@/public/images/tech/Aws.png';
 import headphone from '@/public/images/tech/headphone.png';
 import PageStarter from '@/components/section/PageStarter';
@@ -31,7 +30,14 @@ export const metadata = {
 };
 
 export default function Home() {
-  const technologies = [boxfigma, headphone, react, aws, callCenter, python];
+  const technologies = [
+    boxfigma,
+    headphone,
+    react,
+    aws,
+    '/images/tech/callCenter.png',
+    python,
+  ];
 
   const titleText = [
     { text: 'Mask it,', color: 'text-mainBlack' },

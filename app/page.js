@@ -4,13 +4,10 @@ import react from '@/public/images/tech/React.png';
 import angular from '@/public/images/tech/Angular.png';
 import swift from '@/public/images/tech/Swift.png';
 import python from '@/public/images/tech/Python.png';
-import vue from '@/public/images/tech/vue.png';
 import figma from '@/public/images/tech/figma2.png';
-import callCenter from '@/public/images/tech/callCenter.png';
 import aws from '@/public/images/tech/Aws.png';
 import android from '@/public/images/tech/Android.png';
 import zendex from '@/public/images/tech/Zendex.png';
-import translators from '@/public/images/tech/translators.png';
 import PageStarter from '@/components/section/PageStarter';
 import HiringCard from '@/components/card/HiringCard';
 import features1 from '@/public/images/featuresbg/features1.png';
@@ -43,7 +40,14 @@ export const metadata = {
 };
 
 export default function Home() {
-  const technologies = [swift, android, react, angular, vue, python];
+  const technologies = [
+    swift,
+    android,
+    react,
+    angular,
+    '/images/tech/vue.png',
+    python,
+  ];
 
   const titleText = [
     { text: 'Grow', color: 'text-mainBlack' },
@@ -110,7 +114,7 @@ export default function Home() {
       title: 'Data Entry',
     },
     {
-      icon: callCenter,
+      icon: '/images/tech/callCenter.png',
       title: 'Call Center Associates',
     },
     {
@@ -122,7 +126,7 @@ export default function Home() {
       title: 'Live chat/email support',
     },
     {
-      icon: translators,
+      icon: '/images/tech/translators.png',
       title: 'Translators',
     },
   ];

@@ -4,7 +4,6 @@ import react from '@/public/images/tech/React.png';
 import python from '@/public/images/tech/Python.png';
 import figma from '@/public/images/tech/figma2.png';
 import boxfigma from '@/public/images/tech/Figma.png';
-import callCenter from '@/public/images/tech/callCenter.png';
 import aws from '@/public/images/tech/Aws.png';
 import headphone from '@/public/images/tech/headphone.png';
 import zendex from '@/public/images/tech/Zendex.png';
@@ -38,7 +37,14 @@ export const metadata = {
 };
 
 export default function Home() {
-  const technologies = [boxfigma, headphone, react, aws, callCenter, python];
+  const technologies = [
+    boxfigma,
+    headphone,
+    react,
+    aws,
+    '/images/tech/callCenter.png',
+    python,
+  ];
 
   const titleText = [
     { text: 'Grow', color: 'text-mainBlack' },
@@ -107,7 +113,7 @@ export default function Home() {
       title: 'Data Entry',
     },
     {
-      icon: callCenter,
+      icon: '/images/tech/callCenter.png',
       title: 'Call Center Associates',
     },
     {
