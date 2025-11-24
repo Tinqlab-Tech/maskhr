@@ -1,17 +1,18 @@
 import React from 'react';
 import MainText from '../typography/MainText';
-import ComponentAnimationOne from '@/animations/ComponentAnimationOne';
 import OtherAnimation from '@/animations/OthherAnimationn';
+import Header from '../partials/Header';
 
 const OtherPageHero = ({ title, subtitle }) => {
   return (
-    <section className="h-screen bg-herobg bg-cover bg-center bg-no-repeat px-[6vw] py-[4vh]">
+    <section className="h-screen bg-herobg bg-cover bg-bottom bg-no-repeat">
+      <Header />
       <OtherAnimation>
-        <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
-          <h1 className="font-lato text-[50px] font-bold leading-[50px] tracking-tight">
+        <div className="flex h-full flex-col items-center justify-center gap-4 px-[6vw] text-center">
+          <h1 className="font-lato text-[50px] font-bold leading-[50px] tracking-normal">
             {title}
           </h1>
-          <div className="px-[6vw] md:px-[8vw]">
+          <div className="">
             <MainText text={subtitle} color="text-mainBlack/50" />
           </div>
         </div>

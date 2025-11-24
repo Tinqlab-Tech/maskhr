@@ -20,8 +20,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-herobg bg-cover bg-no-repeat">
-      <div className="sticky flex items-center justify-between gap-4 px-[6vw] py-[4vh]">
+    <header className="bg-transparent">
+      <div className="sticky flex items-center justify-between gap-4 px-[4vw] py-[4vh]">
         {' '}
         <Link href={'/'}>
           <ImageWrapper src={logo} width={140} height={80} alt={'Mask Hr'} />

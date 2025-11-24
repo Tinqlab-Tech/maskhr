@@ -21,24 +21,24 @@ const MainHero = ({
   const positions = [
     'top-5 left-60',
     'top-60 left-10',
-    'bottom-10 left-60',
+    'bottom-20 left-60',
     'top-5 right-60',
     'top-60 right-10',
-    'bottom-10 right-60',
+    'bottom-20 right-60',
   ];
 
   return (
     <section className="h-screen bg-herobg bg-cover bg-center bg-no-repeat">
       <Header />
-      <div className="relative h-full px-[6vw] py-[4vh]">
+      <div className="h-full px-[6vw] py-[4vh]">
         <OtherAnimation>
-          <div className="flex h-full items-center justify-center">
+          <div className="relative flex h-full items-center justify-center">
             <div className="flex flex-col items-center gap-4 text-center md:w-3/4">
               {/* Title Section */}
               <h1
                 className={`${
                   titleSize ? titleSize : 'text-[32px] leading-[38px]'
-                } font-lato font-bold tracking-tight`}
+                } font-lato font-bold tracking-normal`}
               >
                 {title.map((ld, i) => (
                   <span key={i} className={ld.color || 'text-mainBlack'}>

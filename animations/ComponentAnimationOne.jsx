@@ -37,7 +37,7 @@ export default function ComponentAnimationOne({
           x: 0,
           y: 0,
           duration,
-          ease: 'back.out(1)', // nice bounce
+          ease: 'back.out(0.8)', // nice bounce
         }
       );
 
