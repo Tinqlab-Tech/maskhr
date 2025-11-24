@@ -246,9 +246,7 @@ export default function Home() {
           <SignUpForm />
         </ComponentAnimationTwo>
       </DoublePageBorders>
-      <PageBorders
-        background={'bg-IntersectUp bg-cover bg-center bg-no-rerpeat'}
-      >
+      <PageBorders background={'bg-IntersectUp bg-cover bg-top bg-no-rerpeat'}>
         <div className="flex flex-col gap-4 md:gap-8">
           <LightPageStarter
             hasBadge={true}
@@ -275,7 +273,7 @@ export default function Home() {
         </div>
       </PageBorders>{' '}
       <PageBorders
-        background={'bg-IntersectDown bg-cover bg-center bg-no-rerpeat'}
+        background={'bg-IntersectDown bg-cover bg-bottom bg-no-rerpeat'}
         padding={null}
       >
         <div className="flex flex-col gap-4 py-[10vh] md:gap-8">

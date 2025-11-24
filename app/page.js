@@ -196,20 +196,17 @@ export default function Home() {
   ];
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="block">
-        {' '}
-        <MainHero
-          title={titleText}
-          titleSize="text-[60px]"
-          btnLink1={'/'}
-          btnText1="Find Talents"
-          btnLink2={'/'}
-          btnText2="Find Job"
-          hasTech={true}
-          technologies={technologies}
-        />
-      </section>
+      {/* Hero Section */}{' '}
+      <MainHero
+        title={titleText}
+        titleSize="text-[60px]"
+        btnLink1={'/'}
+        btnText1="Find Talents"
+        btnLink2={'/'}
+        btnText2="Find Job"
+        hasTech={true}
+        technologies={technologies}
+      />
       <PageBorders>
         <div className="flex flex-col gap-4 md:gap-8">
           <PageStarter
@@ -272,9 +269,7 @@ export default function Home() {
           <SignUpForm />
         </ComponentAnimationTwo>
       </DoublePageBorders>
-      <PageBorders
-        background={'bg-IntersectUp bg-cover bg-center bg-no-rerpeat'}
-      >
+      <PageBorders background={'bg-IntersectUp bg-cover bg-top bg-no-rerpeat'}>
         <div className="flex flex-col gap-4 md:gap-8">
           <LightPageStarter
             hasBadge={true}
@@ -301,10 +296,12 @@ export default function Home() {
         </div>
       </PageBorders>{' '}
       <PageBorders
-        background={'bg-IntersectDown bg-cover bg-center bg-no-rerpeat'}
+        background={
+          'bg-IntersectDown py-[10vh] bg-cover bg-bottom bg-no-rerpeat'
+        }
         padding={null}
       >
-        <div className="flex flex-col gap-4 py-[10vh] md:gap-8">
+        <div className="flex flex-col gap-4 md:gap-8">
           <LightPageStarter
             hasBadge={true}
             badgeIcon={vector4}

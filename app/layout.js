@@ -6,30 +6,17 @@ import './globals.css';
 import React from 'react';
 // import Footer from "@/components/partials/Footer";
 import Header from '@/components/partials/Header';
-import localFont from 'next/font/local';
+import { Lato } from 'next/font/google';
 import Script from 'next/script';
 import Footer from '@/components/partials/Footer';
 
 //fonts
-const harmonyOs = localFont({
-  src: [
-    {
-      path: './../fonts/Gilroy-Regular.ttf',
-      weight: '300',
-      style: 'light',
-    },
-    {
-      path: './../fonts/Gilroy-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './../fonts/Gilroy-Bold.ttf',
-      weight: '700',
-      style: 'bold',
-    },
-  ],
-  variable: '--font-Gilroy',
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'], // choose the weights you need
+  style: ['normal', 'italic'], // optional
+  variable: '--font-lato', // optional for CSS variable usage
+  display: 'swap', // improves font loading
 });
 
 export default function RootLayout({ children }) {
@@ -37,11 +24,10 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-      <html lang="en" className={`${harmonyOs.variable} font-sans z-10`}>
+      <html lang="en" className={`${lato.className} font-sans z-10`}>
         <body className="tracking-wider">
           <main>
             {/* <div id="google_translate_element"></div>  */}
-            <Header />
             {children}
             <Footer />
             {/* <>
