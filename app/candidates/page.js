@@ -4,6 +4,7 @@ import react from '@/public/images/tech/React.png';
 import python from '@/public/images/tech/Python.png';
 import boxfigma from '@/public/images/tech/Figma.png';
 import aws from '@/public/images/tech/Aws.png';
+import callCenter from '@/public/images/tech/callCenter.png';
 import headphone from '@/public/images/tech/headphone.png';
 import PageStarter from '@/components/section/PageStarter';
 import HiringCard from '@/components/card/HiringCard';
@@ -30,14 +31,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const technologies = [
-    boxfigma,
-    headphone,
-    react,
-    aws,
-    '/images/tech/callCenter.png',
-    python,
-  ];
+  const technologies = [boxfigma, headphone, react, aws, callCenter, python];
 
   const titleText = [
     { text: 'Mask it,', color: 'text-mainBlack' },
@@ -209,17 +203,17 @@ export default function Home() {
               <ComponentAnimationOne
                 key={index}
                 delay={index * 0.2}
-                className="flex items-stretch"
+                className=""
               >
                 {' '}
-                <div className="flex flex-col items-center gap-4 md:gap-8">
+                <div className="flex flex-col gap-4 md:gap-8">
                   <span
-                    className={`${item.badgeColor} w-fit rounded-[24px] px-[20px] py-[15px] text-[14px] font-semibold shadow-custom-secondary`}
+                    className={`${item.badgeColor} mx-auto w-fit rounded-[24px] px-[20px] py-[15px] text-[14px] font-semibold shadow-custom-secondary`}
                   >
                     {item.badge}
                   </span>
                   <div
-                    className={`${item.bgColor} flex min-h-[40vh] flex-col items-center justify-center rounded-[10px] p-[20px] shadow-custom-secondary md:rounded-[20px] md:p-[30px]`}
+                    className={`${item.bgColor} flex min-h-[40vh] items-center justify-center rounded-[10px] p-[20px] shadow-custom-secondary md:rounded-[20px] md:p-[30px]`}
                   >
                     <p className="font-lato text-center text-[18px] font-semibold leading-[20px] tracking-normal md:text-left md:text-[22px] md:leading-[28px]">
                       {item.subtitle}

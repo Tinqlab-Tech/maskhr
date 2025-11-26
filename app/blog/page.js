@@ -139,10 +139,9 @@ export default function Home() {
                     text={
                       'Building a world-class hiring service team with MaskHR'
                     }
-                    size={' font-semibold'}
                     textLeft={true}
                   />
-                  <p className="flex justify-center text-[8px] leading-[10px] text-mainBlack md:justify-start md:text-[16px] md:leading-[16px]">
+                  <p className="flex justify-center text-[14px] leading-[14px] text-mainBlack md:justify-start md:text-[16px] md:leading-[16px]">
                     {`Jan 17, ${new Date().getFullYear()}  `}
                   </p>
                   <MainText
@@ -156,7 +155,7 @@ export default function Home() {
                   {/* button */}
                   <Link href={'/'}>
                     <button
-                      className={`font-lato flex w-full cursor-pointer items-center justify-center gap-2 rounded-[24px] text-[10px] font-normal leading-[10px] text-primary md:justify-start lg:text-[14px] lg:leading-[16px]`}
+                      className={`font-lato flex w-full cursor-pointer items-center justify-center gap-2 rounded-[24px] text-[16px] font-normal leading-[16px] text-primary md:justify-start md:text-[20px] lg:leading-[20px]`}
                     >
                       {'Read Now >'}
                     </button>

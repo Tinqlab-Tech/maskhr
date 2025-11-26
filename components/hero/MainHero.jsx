@@ -21,10 +21,10 @@ const MainHero = ({
   const positions = [
     'top-5 left-60',
     'top-60 left-10',
-    'bottom-20 left-60',
+    'bottom-30 left-60',
     'top-5 right-60',
     'top-60 right-10',
-    'bottom-20 right-60',
+    'bottom-30 right-60',
   ];
 
   return (

@@ -6,6 +6,8 @@ import swift from '@/public/images/tech/Swift.png';
 import python from '@/public/images/tech/Python.png';
 import figma from '@/public/images/tech/figma2.png';
 import aws from '@/public/images/tech/Aws.png';
+import callCenter from '@/public/images/tech/callCenter.png';
+import translators from '@/public/images/tech/translators.png';
 import android from '@/public/images/tech/Android.png';
 import zendex from '@/public/images/tech/Zendex.png';
 import PageStarter from '@/components/section/PageStarter';
@@ -114,7 +116,7 @@ export default function Home() {
       title: 'Data Entry',
     },
     {
-      icon: '/images/tech/callCenter.png',
+      icon: callCenter,
       title: 'Call Center Associates',
     },
     {
@@ -126,7 +128,7 @@ export default function Home() {
       title: 'Live chat/email support',
     },
     {
-      icon: '/images/tech/translators.png',
+      icon: translators,
       title: 'Translators',
     },
   ];
@@ -199,7 +201,7 @@ export default function Home() {
       {/* Hero Section */}{' '}
       <MainHero
         title={titleText}
-        titleSize="text-[60px]"
+        titleSize="text-[60px] leading-[60px]"
         btnLink1={'/'}
         btnText1="Find Talents"
         btnLink2={'/'}

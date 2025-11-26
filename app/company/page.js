@@ -7,6 +7,8 @@ import boxfigma from '@/public/images/tech/Figma.png';
 import aws from '@/public/images/tech/Aws.png';
 import headphone from '@/public/images/tech/headphone.png';
 import zendex from '@/public/images/tech/Zendex.png';
+import callCenter from '@/public/images/tech/callCenter.png';
+import translators from '@/public/images/tech/translators.png';
 import PageStarter from '@/components/section/PageStarter';
 import HiringCard from '@/components/card/HiringCard';
 import features2 from '@/public/images/featuresbg/features2.png';
@@ -36,14 +38,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const technologies = [
-    boxfigma,
-    headphone,
-    react,
-    aws,
-    '/images/tech/callCenter.png',
-    python,
-  ];
+  const technologies = [boxfigma, headphone, react, aws, callCenter, python];
 
   const titleText = [
     { text: 'Grow', color: 'text-mainBlack' },
@@ -112,7 +107,7 @@ export default function Home() {
       title: 'Data Entry',
     },
     {
-      icon: '/images/tech/callCenter.png',
+      icon: callCenter,
       title: 'Call Center Associates',
     },
     {
@@ -124,7 +119,7 @@ export default function Home() {
       title: 'Live chat/email support',
     },
     {
-      icon: '/images/tech/translators.png',
+      icon: translators,
       title: 'Translators',
     },
   ];
@@ -311,9 +306,9 @@ export default function Home() {
             {staffingInsight.map((item, index) => (
               <ComponentAnimationOne key={index} delay={index * 0.2}>
                 {' '}
-                <div className="flex flex-col items-center gap-4 md:gap-8">
+                <div className="flex flex-col gap-4 md:gap-8">
                   <span
-                    className={`${item.badgeColor} w-fit rounded-[24px] px-[20px] py-[15px] text-[14px] font-semibold shadow-custom-secondary`}
+                    className={`${item.badgeColor} mx-auto w-fit rounded-[24px] px-[20px] py-[15px] text-[14px] font-semibold shadow-custom-secondary`}
                   >
                     {item.badge}
                   </span>
